@@ -141,23 +141,3 @@ form {
   background-color: #ec930e;
   border: 0;
 }
-
-.box {
-  display: none;
-  margin: auto;
-  top: 20px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  width: 240px;
-  position: absolute;
-  padding: 10px 10px 26px 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: #e6fffa;
-  color: #2e656a;
-}
-
-.title {
-  color: #2e656a;
-}

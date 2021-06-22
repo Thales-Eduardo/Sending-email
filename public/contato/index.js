@@ -4,15 +4,31 @@ function formContato() {
   const telefone = document.querySelector(".telefone").value;
   const mensagem = document.querySelector(".mensagem").value;
 
-  const resposta = {
-    name: name,
-    email: email,
-    telefone: telefone,
-    mensagem: mensagem,
-  };
+  const regex =
+    /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
-  axios
+  if (!regex.test(email)) {
+    alert("E-mail invalido, verificar credencias.");
+    email.focus;
+    return false;
+  }
+
+  const resposta = { name, email, telefone, mensagem };
+  sendEmail(resposta);
+}
+
+async function sendEmail(resposta) {
+  await axios
     .post("http://localhost:3333/contato", resposta)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+    .then((res) => {
+      if (res) {
+        alert("Entraremos em contato.");
+      }
+    })
+    .catch((error) => {
+      if (error.response) {
+        const { message } = error.response.data;
+        alert(message);
+      }
+    });
 }
