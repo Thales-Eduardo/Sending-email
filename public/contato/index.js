@@ -32,3 +32,11 @@ async function sendEmail(resposta) {
       }
     });
 }
+
+function mascara() {
+  const telefone = document.querySelector(".telefone");
+
+  if (telefone.value.length == 2) {
+    telefone.value += "  ";
+  }
+} //00 000000
