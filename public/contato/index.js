@@ -40,3 +40,13 @@ function mascara() {
     telefone.value += "  ";
   }
 } //00 000000
+
+function menuAtivar() {
+  const menu = document.querySelector(".menu-desk");
+  menu.style.display = "block";
+}
+
+function menuDesativar() {
+  const menu = document.querySelector(".menu-desk");
+  menu.style.display = "none";
+}

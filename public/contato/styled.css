@@ -142,7 +142,71 @@ form {
   border: 0;
 }
 
+.butt:hover {
+  background-color: #faa423;
+}
+
+.menu-desk {
+  position: fixed;
+  z-index: 999;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  background-color: #222;
+  padding: 6px;
+  height: 100vh;
+  width: 300px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > a {
+  text-decoration: none;
+  height: 60px;
+  width: 80px;
+  color: #fff;
+  font-size: 26px;
+  flex-direction: column;
+}
+
+a:hover {
+  color: #ec930e;
+}
+
+.image-2 {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-image: url(../assets/menu.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.image-1 {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-image: url(../assets/menu.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
 @media (max-width: 400px) {
+  .image-1 {
+    height: 40px;
+    width: 40px;
+  }
+
   form {
     height: 100%;
     width: 100%;
@@ -151,10 +215,23 @@ form {
 
   h1 {
     font-size: 26px;
-    margin-top: 10px;
+    margin-top: 60px;
   }
 
   .name {
-    margin-top: 70px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .menu-desk {
+    display: none;
+  }
+}
+/*1198*/
+
+@media (max-width: 896px) {
+  .menu-desk {
+    width: 100%;
   }
 }
