@@ -70,6 +70,10 @@ form {
   color: #fff;
 }
 
+.name:focus {
+  border-bottom: 2px solid #faa423;
+}
+
 .email {
   height: 40px;
   width: 90%;
@@ -87,6 +91,10 @@ form {
 
 .email::placeholder {
   color: #fff;
+}
+
+.email:focus {
+  border-bottom: 2px solid #faa423;
 }
 
 .telefone {
@@ -108,6 +116,10 @@ form {
   color: #fff;
 }
 
+.telefone:focus {
+  border-bottom: 2px solid #faa423;
+}
+
 .mensagem {
   height: 170px;
   width: 90%;
@@ -125,6 +137,10 @@ form {
 
 .mensagem::placeholder {
   color: #fff;
+}
+
+.mensagem:focus {
+  border: 2px solid #faa423;
 }
 
 .butt {
