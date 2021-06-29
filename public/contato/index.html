@@ -23,27 +23,29 @@
     </section>
 
     <section>
-      <h1>Formulário de contato</h1>
-      <form>
-        <input 
+      <div class="animation">
+        <h1>Formulário de contato</h1>
+        <form>
+          <input 
           class="name"
           type="text"
           placeholder="Name"
-        />
-        <input 
+          />
+          <input 
           class="email"
           type="email"
           placeholder="E-mail"
-        />
-        <input 
+          />
+          <input 
           class="telefone"
           type="text"
           placeholder="Telefone"
           onkeyup="mascara()"
-        />
-        <textarea class="mensagem" placeholder="Sua mensagem..."></textarea>
-        <button class="butt" onclick="formContato()" type="button" >Enviar</button>
-      </form>
+          />
+          <textarea class="mensagem" placeholder="Sua mensagem..."></textarea>
+          <button class="butt" onclick="formContato()" type="button" >Enviar</button>
+        </form>
+      </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
