@@ -20,9 +20,9 @@ Contato.post("/", async (req, res) => {
       },
     });
 
-    return res.json("sucesso");
+    return res.status(200).json("sucesso");
   } catch (error) {
-    return res.json({ error: "Erro no envio!" });
+    return res.status(400).json({ error: "Erro no envio!" });
   }
 });
 
