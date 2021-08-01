@@ -10,7 +10,9 @@ Envio de e-mail com node e nodemailer.
 
 handlebars:
 
+```bash
 yarn add express-handlebars nodemailer-express-handlebars
+```
 
 # Mobile
 
