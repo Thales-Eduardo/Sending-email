@@ -27,6 +27,3 @@ Contato.post("/", async (req, res) => {
 });
 
 export default Contato;
-
-//Para enviar a resposta do envio do email mais rápido você pode tirar o async e await,
-//porem ira perder o controle caso der um erro.
