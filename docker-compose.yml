@@ -21,11 +21,8 @@ services:
     volumes:
       - .:/usr/app
     depends_on:
-      - postgres_bd
       - redis_bd
 
 volumes:
-  pgdata:
-    driver: local
   rsdata:
     driver: local

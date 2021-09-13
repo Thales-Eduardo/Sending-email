@@ -1,28 +1,30 @@
-import { Router } from "express";
-
-import Mail from "../lib/Mail";
+import { Router } from 'express';
+import { contactEmail } from '../jobs/index';
 
 const Contato = Router();
 
-Contato.post("/", async (req, res) => {
+Contato.post('/', async (req, res) => {
   try {
     const { name, email, telefone, mensagem } = req.body;
 
-    await Mail.sendMail({
-      to: "Thales Eduardo <thalesdev22@gmail.com>",
-      subject: "Teste de envio",
-      template: "emailDeContato",
-      context: {
-        name: name,
-        telefone: telefone,
-        email: email,
-        mensagem: mensagem,
-      },
-    });
+    const user = {
+      name,
+      email,
+      telefone,
+      mensagem,
+    };
 
-    return res.status(200).json("sucesso");
+    await contactEmail.add(
+      { user },
+      {
+        delay: 10000,
+        attemps: 3, //se falhar fass 3 tentativas novamente
+      },
+    );
+
+    return res.status(200).json('sucesso');
   } catch (error) {
-    return res.status(400).json({ error: "Erro no envio!" });
+    return res.status(400).json({ error: 'Erro no envio!' });
   }
 });
 
