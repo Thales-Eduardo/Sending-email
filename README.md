@@ -1,6 +1,22 @@
 # Envio de e-mail
 
-Envio de e-mail com node e nodemailer.
+Para rodar o projeto.
+
+Para subir os contêineres.
+
+```bash
+docker-compose up -d
+```
+
+Para deletar os contêineres.
+
+```bash
+docker-compose down
+```
+
+---
+
+> Envio de e-mail com node e nodemailer.
 
 ![form](./docs/form.png)
 
